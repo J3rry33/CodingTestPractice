@@ -30,5 +30,8 @@
     <ClCompile Include="로그인 성공.cpp">
       <Filter>소스 파일\lv.0</Filter>
     </ClCompile>
+    <ClCompile Include="치킨 쿠폰.cpp">
+      <Filter>소스 파일\lv.0</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
