@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="등수 매기기.cpp" />
     <ClCompile Include="로그인 성공.cpp" />
     <ClCompile Include="유한소수 판별하기.cpp" />
     <ClCompile Include="종이자르기.cpp" />
