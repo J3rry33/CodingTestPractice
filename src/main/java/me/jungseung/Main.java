@@ -3,27 +3,23 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Map<Integer, Integer> map = new HashMap<>();
-        map.put(600, 100);
-        map.put(400, 100);
-        map.put(300, 200);
-        map.put(200, 300);
-        map.put(700, 200);
-        map.put(800, 300);
-        map.put(100, 400);
-        map.put(900, 400);
+        int[] array = {1,2,3,3,3,4};
+        int answer = 0;
+        int[] freq = new int[1000];
+        int freqNum = -1;
 
-        List<Integer> keySet = new ArrayList<>(map.keySet());
+        Arrays.fill(freq, 0);
 
-        keySet.sort(new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                if(map.get(o1) == map.get(o2)){
-                    return o2.compareTo(o1);
-                }
-                return map.get(o1).compareTo(map.get(o2));
-            }
-        });
-        System.out.println(keySet);
+        for(int i=0; i<array.length; i++){
+            freq[array[i]]++;
+        }
+        System.out.println(freq[0]);
+
+        for(int i=0; i<freq.length; i++){
+            if(freq[i] > freqNum) freqNum = freq[i];
+            if(freq[i] == freqNum) System.out.println("same");
+        }
+        answer = freqNum;
+        System.out.println(answer);
     }
 }
